@@ -2,6 +2,11 @@
 
 set -x
 
+if [ -d ve ] ; then
+    source ve/bin/activate
+fi
+
+
 cd ${0%%$(basename $0)}
 mkdir build
 cd build

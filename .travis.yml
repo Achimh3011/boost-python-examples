@@ -10,11 +10,21 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - libboost-all-dev
-
+    - os: linux
+      sudo: required
+      dist: trusty
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - libboost-all-dev
+            - python3.4-venv
+      before_install:
+        - sudo ln -sf /usr/lib/x86_64-linux-gnu/libboost_python3-py34.so /usr/lib/x86_64-linux-gnu/libboost_python.so
+        - python3 -m venv ve
     - os: osx
       osx_image: xcode9.2
-      env:
-        - PYTHON_EXECUTABLE: /usr/local/bin/python
       before_install:
         - brew update && brew bundle
         - brew unlink python && brew install python@2
