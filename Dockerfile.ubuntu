@@ -1,5 +1,5 @@
 FROM ubuntu:bionic
-RUN apt-get update && apt-get install -y libboost-all-dev python-dev git cmake g++ gdb python-dbg 
+RUN apt-get update && apt-get install -y libboost-all-dev python3-dev git cmake g++ gdb python3-dbg 
 RUN mkdir /work
 VOLUME /work/src
 WORKDIR /work
