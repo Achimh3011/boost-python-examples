@@ -4,6 +4,7 @@ script: ./build.sh
 matrix:
   include:
     - os: linux
+      dist: bionic
       addons:
         apt:
           sources:
