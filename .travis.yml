@@ -13,7 +13,7 @@ matrix:
             - libboost-all-dev
 
     - os: osx
-      osx_image: xcode9.2
+      osx_image: xcode11.4
       env:
         - PYTHON_EXECUTABLE: /usr/local/bin/python
       before_install:
